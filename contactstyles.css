@@ -56,9 +56,7 @@ section h2 {
     justify-content: center;
     background-color: #444;
     color: #fff;
-    border-radius: 100px;
-    margin-right: 800px;
-    margin-left: 800px;
+    border-radius: 10rem;
 
 }
 
@@ -66,8 +64,31 @@ section div{
     text-align: center;
 }
 
+label {
+    justify-content: center;
+    width: 75%;
+    color: #444;
+    font-style: italic;
+    font-size: 1.75rem;
 
+}
 
+form {
+    size: 100rem;
+}
+
+input {
+    width: 50%;
+    height: 25%;
+    font-size: 2rem;
+    justify-content: left;
+}
+
+textarea {
+    width: 50%;
+    height: 25%;
+    font-size: 2rem;
+}
 
 
 
