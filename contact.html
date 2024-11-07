@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact John O'Reilly</title>
+    <title>Contact Us</title>
     <link rel="stylesheet" href="contactstyles.css">
 </head>
 
@@ -23,33 +24,55 @@
 
     <section> <!-- Contact Form -->
         <h2>Have a question?</h2>
-            <form action="/submit_form" method="post">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required><br>
+        <div class="container">
+            <div class="content">
+                <div class="left-side">
+                    <div class="address details">
+                        <div class="topic">Address</div>
+                        <div class="text-one">TU Dublin Grangegorman, Grangegorman Lower, Dublin 7</div>
+                        <div class="text-two">D07 H6K8</div>
+                    </div>
+                    <div class="phone details">
+                        <div class="topic">Phone</div>
+                        <div class="text-one">089 123 4567</div>
+                        <div class="text-two">089 765 4321</div>
+                    </div>
+                    <div class="email details">
+                        <div class="topic">Email</div>
+                        <div class="text-one">joreilly@gmail.com</div>
+                        <div class="text-two">info.joreilly@gmail.com</div>
+                    </div>
+                </div>
+                <div class="right-side">
+                    <div class="topic-text"> Send Us A Message</div>
+                    <p>Feel free to send me a message if you have any queries. </p>
+                    <form action="#" method="post">
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required><br>
+                        <input type="text" id="name" name="name" required placeholder="Enter your name"><br>
+                        <input type="email" id="email" name="email" required placeholder="Enter your email"><br>
+                        <input type="Mobile" id="Mobile" name="Mobile" required placeholder="Enter your mobile number"><br>
+                        <textarea id="message" name="message" rows="3" required placeholder="Send us a message"></textarea><br>
 
-                <label for="Mobile">Mobile:</label>
-                <input type="Mobile" id="Mobile" name="Mobile" required><br>
+                        <input type="submit" value="Send">
+                    </form>
+                </div>
+            </div>
+        </div>
 
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" required></textarea><br>
-
-                <input type="submit" value="Send Message">
-            </form>
     </section>
 
 
     <section>
-        <h2>Where to find Us:</h2> 
+        <h2>Where to find Us:</h2>
         <!-- Google Map of location -->
-        
+
         <div style="width: 100%">
-            <iframe width="80%" height="500" frameborder="0" scrolling="yes" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=tud%20grangegorman+(John's%20Garage)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/">gps systems</a>
+            <iframe width="80%" height="500" frameborder="0" scrolling="yes" marginheight="0" marginwidth="0"
+                src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=tud%20grangegorman+(John's%20Garage)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a
+                    href="https://www.gps.ie/">gps systems</a>
             </iframe>
         </div>
-    
+
     </section>
 
     <hr>
@@ -58,4 +81,5 @@
         <p>&copy; 2024 John O'Reilly's Car Collection.</p>
     </footer>
 </body>
+
 </html>
