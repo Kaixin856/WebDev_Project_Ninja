@@ -1,4 +1,4 @@
-/* Contact Styles */
+/*Contact Stylws*/
 * {
     box-sizing: border-box;
 }
@@ -7,17 +7,22 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: linear-gradient(#f5f5f5, #6d6767) ;
+    background-image: linear-gradient(#f5f5f5, #6d6767);
     color: #333;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
 }
 
+/* Header */
 header {
     background-color: #333;
     color: #fff;
     padding: 50px;
     text-align: center;
+    width: 100%;
 }
 
 h1 {
@@ -28,7 +33,6 @@ h1 {
 
 /* Navigation */
 nav ul {
-    
     padding: 0;
     margin: 0;
     display: flex;
@@ -51,10 +55,12 @@ nav ul a:hover {
     background-color: #666;
 }
 
-section form{
-    text-align: center;
-    margin-right: 0px;
+/* Contact Form Section */
+section {
+    width: 100%;
+    padding: 20px;
 }
+
 section h2 {
     margin: 20px;
     padding-left: 0;
@@ -63,13 +69,13 @@ section h2 {
     background-color: #444;
     color: #fff;
     border-radius: 10rem;
-
 }
 
-section div{
+section div {
     text-align: center;
 }
 
+/* Container for content */
 .container {
     max-width: 1170px;
     margin-left: auto;
@@ -77,62 +83,108 @@ section div{
     padding: 1em;
 }
 
-.container > * {
+.container>* {
     padding: 1em;
 }
 
-.container .content{
-    display: flexbox;
-    align-items: center;
+/* Main content layout - Flexbox for larger screens */
+.container .content {
+    display: flex;
+    align-items: flex-start;
     justify-content: space-between;
-    margin-left: 25%;
-    margin-right: 25%;
+    flex-wrap: wrap;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 1em;
+    width: 100%;
 }
 
+/* Right-side box styling */
 .container .right-side {
-    width: 100%;
-    height: 100%;
+    width: 48%;
+    max-width: 600px;
+    height: auto;
     background: #ffffff7e;
     box-shadow: 0 0 24px 0 #444444ae;
     border-radius: 10px;
-    padding: 10px;
-   
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
 }
 
-.container .content .right-side {
-    width: 100%;
-    height: 100%;
-    
-   
+/* Left-side box styling */
+.container .left-side {
+    width: 48%; 
+    height: auto; 
+    background: #f0f0f0;
+    box-shadow: 0 0 24px 0 #444444ae;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    margin: 10px; 
 }
 
-.container .left-side .details {
-    margin: 20px;
-    text-align: center;
-}
-
-.topic {
-    font-weight: bolder;
-    font-style: italic;
-    margin-bottom: 10px;
-}
-
-.topic-text {
-    margin-bottom: 10px;
-    font-style: italic;
-    font-size: 125%;
-    font-weight: bolder;
-}
-
+/* Form element styling */
 .right-side form {
+    width: 100%;
+    /* Full width of its container */
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
+    grid-template-columns: 1fr;
+    /* One column */
+    gap: 15px;
+    /* Space between form elements */
+    justify-items: center;
+    /* Center form inputs */
 }
 
+.right-side input,
+.right-side textarea {
+    width: 90%;
+    /* Make input fields take up most of the container width */
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
 
+.right-side input[type="submit"] {
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    border: none;
+    padding: 15px;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
 
+.right-side input[type="submit"]:hover {
+    background-color: #555;
+}
 
+/* Optional: Add a max width to form inputs */
+.right-side input[type="text"],
+.right-side input[type="email"],
+.right-side input[type="Mobile"],
+.right-side textarea {
+    max-width: 500px;
+}
+
+/* Adjust the topic-text for better alignment */
+.topic-text {
+    font-weight: bolder;
+    font-style: italic;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.5em;
+}
 
 /* Footer */
 footer {
@@ -150,4 +202,42 @@ hr {
     height: 1px;
     background-color: #ddd;
     margin: 40px 0;
+}
+
+/* Media Query for small screens (mobile) */
+@media screen and (max-width: 768px) {
+
+    /* Stack the left and right sides on top of each other */
+    .container .content {
+        flex-direction: column;
+        /* Stack the two sides */
+        align-items: center;
+        /* Center items */
+        justify-content: center;
+    }
+
+    /* Adjust the width of left and right side for mobile */
+    .container .right-side,
+    .container .left-side {
+        width: 90%;
+        /* Full width for smaller screens */
+        margin: 10px 0;
+        /* Add margin between sections */
+    }
+
+    /* Adjust the padding for form elements */
+    .right-side input,
+    .right-side textarea {
+        width: 100%;
+        /* Make inputs take full width */
+        padding: 12px;
+        /* Slightly larger padding */
+    }
+}
+
+.topic {
+    font-style: italic;
+    margin: 5px;
+    font-weight: bold;
+    font-size: larger;
 }
