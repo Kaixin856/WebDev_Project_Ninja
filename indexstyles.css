@@ -93,12 +93,6 @@ h3 strong {
     font-size: 1.25rem;
 }
 
-@media (max-width: 2000px) {
-    .car-of-the-week {
-        flex-direction: column;
-    }
-}
-}
 
 ul {
     list-style-type: none;
@@ -128,7 +122,7 @@ hr {
 }
 
 /* Media Queries for Mobile */
-@media (max-width: 768px) {
+@media (max-width: 2000px) {
     .car-of-the-week {
         flex-direction: column;
     }
