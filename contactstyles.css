@@ -233,3 +233,37 @@ hr {
     font-weight: bold;
     font-size: larger;
 }
+
+/* Media Queries for Mobile */
+@media (max-width: 768px) {
+    .car-of-the-week {
+        flex-direction: column;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        border-radius: 0;
+    }
+
+    nav ul a {
+        padding: 1rem;
+        border-right: none;
+        border-left: none;
+    }
+
+    section h2 {
+        font-size: 1.8rem;
+    }
+
+    .car-description {
+        font-size: 1rem;
+    }
+
+    footer {
+        font-size: 0.875rem;
+    }
+}
