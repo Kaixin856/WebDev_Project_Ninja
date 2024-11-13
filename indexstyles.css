@@ -93,7 +93,7 @@ h3 strong {
     font-size: 1.25rem;
 }
 
-@media (max-width: 200px) {
+@media (max-width: 2000px) {
     .car-of-the-week {
         flex-direction: column;
     }
