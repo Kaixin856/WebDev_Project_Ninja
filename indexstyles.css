@@ -89,7 +89,15 @@ h3 strong {
 
 .car-description {
     flex: 1 1 50%;
+    max-width: 600px;
     font-size: 1.25rem;
+}
+
+@media (max-width: 768px) {
+    .car-of-the-week {
+        flex-direction: column;
+    }
+}
 }
 
 ul {
