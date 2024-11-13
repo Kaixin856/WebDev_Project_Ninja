@@ -4,59 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>John O'Reilly's Car Collection</title> 
-    <link rel="stylesheet" href="indexstyles.css">
+    <link rel="stylesheet" href="index.css">
 </head>
-
-
 <body>
     <header>
-        <h1>Welcome to John O'Reilly's Car Collection</h1> <!-- Title at top of page -->
-        <nav> <!-- navigation Memu -->
+        <h1>Welcome to John O'Reilly's Car Collection</h1>
+        <nav role="navigation" aria-label="Main Navigation">
             <ul>
-                <a href="index.html">Home</a>
-                <a href="about.html">About Me</a>
-                <a href="car_collections.html">My Collection</a>
-                <a href="contact.html">Contact</a>
+                <li><a href="index.html" aria-label="Go to homepage">Home</a></li>
+                <li><a href="about.html" aria-label="Learn more about John O'Reilly">About Me</a></li>
+                <li><a href="car_collections.html" aria-label="View my car collection">My Collection</a></li>
+                <li><a href="contact.html" aria-label="Contact John O'Reilly">Contact</a></li>
             </ul>
         </nav>
     </header>
 
+    <section>
+        <h2>Car of the Week</h2>
+        <h3>This week's feature: <strong>Nissan GTR</strong>. A modern car of speed and design!</h3>
 
-    <section> <!-- car of the week and with car's pictures -->
-        
-            <h2>Car of the Week</h2>
-            <h3>This week's feature: <strong>Nissan GTR</strong>. A modern car of speed and design!</h3>
-
-            
-            <!-- Iamge of the car -->
-
+        <!-- Flex container for image and description -->
+        <div class="car-of-the-week">
+            <img src="https://images.unsplash.com/photo-1638997611276-b842eb529b20?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                 alt="Nissan GTR sports car showcasing its sleek design" 
+                 class="nissangtrimage">
+            <div class="car-description">
+                <p>The GT-R is a high-performance sports car known for its powerful engine, advanced technology, and iconic design. Often referred to as “Godzilla,” the GT-R combines aggressive looks with blistering speed, making it a favorite among enthusiasts.</p>
+                <ul>
+                    <li>Engine: 3.8-liter twin-turbo V6</li>
+                    <li>Power: 565 hp (standard) | 600 hp (NISMO version)</li>
+                    <li>Transmission: 6-speed dual-clutch automatic</li>
+                    <li>0-60 mph: ~2.9 seconds</li>
+                    <li>Top Speed: 196 mph</li>
+                    <li>All-Wheel Drive for superior handling and control</li>
+                    <li>Design: Aerodynamic with signature quad exhausts and muscular body lines</li>
+                    <li>The GT-R's blend of power, precision, and technology makes it a legend in the world of supercars.</li>
+                </ul>
+            </div>
+        </div>
     </section>
-
-    <table> 
-        <tr>
-            <td> 
-                <img src="https://images.unsplash.com/photo-1638997611276-b842eb529b20?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="NIssan GTR" style="width: 4000px;" class="nissangtrimage">
-            </td>
-            <td>
-                <p> GT-R is a high-performance sports car known for its powerful engine, advanced technology, and iconic design. Often referred to as “Godzilla,” the GT-R combines aggressive looks with blistering speed, making it a favorite among enthusiasts.
-
-                    <li>Engine: 3.8-liter twin-turbo V6</li><br>
-                    <li> Power: 565 hp (standard) | 600 hp (NISMO version)</li><br>
-                    <li> Transmission: 6-speed dual-clutch automatic</li><br>
-                    <li>Transmission: 6-speed dual-clutch automatic</li><br>
-                    <li> 0-60 mph: ~2.9 seconds</li><br>
-                    <li>Top Speed: 196 mph</li><br>
-                    <li>All-Wheel Drive for superior handling and control</li><br>
-                    <li>Design: Aerodynamic with signature quad exhausts and muscular body lines.</li><br>
-                    <li>The GT-R's blend of power, precision, and technology makes it a legend in the world of supercars.</li></p>
-            </td>
-        </tr>
-    </table>
 
     <hr>
 
-    <footer> <!-- Footer -->
+    <footer>
         <p>&copy; 2024 John O'Reilly's Car Collection.</p>
     </footer>
 </body>
+</html>
 </html>
