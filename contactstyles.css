@@ -218,6 +218,19 @@ hr {
         width: 100%;
         padding: 12px;
     }
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        border-radius: 0;
+    }
+
+    nav ul a {
+        padding: 1rem;
+        border-right: none;
+    }
 }
 
 .topic {
