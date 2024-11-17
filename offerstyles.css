@@ -1,126 +1,156 @@
-/* Homepage Styles */
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: linear-gradient(#f5f5f5, #6d6767);
+    background: linear-gradient(#f5f5f5, #6d6767);
     color: #333;
+    height: 100%;
 }
 
 header {
     background-color: #333;
     color: #fff;
-    padding: 50px;
+    padding: 20px;
     text-align: center;
+    box-sizing: border-box;
 }
 
 h1 {
-    font-size: 50px;
+    font-size: 2.5rem;
     margin: 0;
-    padding-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 /* Navigation */
 nav ul {
-
+    list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
     justify-content: center;
     background-color: #444;
-    border-radius: 50px;
+    border-radius: 10px;
+}
+
+nav ul li {
+    margin: 0;
 }
 
 nav ul a {
     display: block;
     padding: 10px 20px;
     color: #fff;
-    background-color: #444;
-    border-right: 1px solid #9e3e3e;
-    border-left: 1px solid #ff0000;
-    border-radius: 50px;
+    text-decoration: none;
+    transition: background-color 0.3s ease; 
+    border-radius: 7px;
 }
 
 nav ul a:hover {
-    background-color: #666;
+    background-color: #666; 
+    border-radius: 30px;
 }
 
-/* Car of the Week Section */
-div {
-    padding: auto;
-    text-align: center;
+nav ul a:active {
+    background-color: #555; 
 }
 
-h2,
-h3 {
-    color: #333;
-
+/* Offer Styles */
+.offer {
+    background-color: #cccccc;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-div h2 {
-    font-style: italic;
-    font-size: 35px;
-    background-color: #333;
-    color: #fff;
-    border-radius: 100px;
-    width: 100%;
-    text-align: center;
-
-}
-
-h3 strong {
-    color: #000;
-}
-
-/* Flexbox Layout for Car of the Week */
-.offerone,
-.offertwo
-.offerthree {
+.offer-content {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: auto;
-    flex-wrap: wrap;
+    flex-direction: column;
 }
 
-.imageone,
-.imagetwo,
-.imagethree {
-    flex: 1 1 40%;
-    max-width: 80%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 0 24px 0 #444444ae;
-}
-
-.descone,
-.desctwo,
-.descthree {
-    flex: 1 1 50%;
-    max-width: 600px;
-    font-size: 1.25rem;
+.car-title {
+    font-size: 24px;
+    margin-bottom: 10px;
     text-align: center;
-    margin:auto;
 }
 
+.offer-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.offer-details .des {
+    width: 45%;
+}
+
+.offer-details img {
+    width: 45%;
+    height: auto;
+}
 
 /* Footer */
 footer {
-    text-align: center;
-    padding: 10px;
     background-color: #444;
     color: #fff;
+    text-align: center;
+    padding: 20px;
     position: relative;
     bottom: 0;
     width: 100%;
 }
 
-hr {
-    border: 0;
-    height: 1px;
-    background-color: #ddd;
-    margin: 40px 0;
+/* Mobile layout */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;  
+        background-color: #333;  
+        border-radius: 50px;        
+        width: 100%;        
+        background-color: #302d2d;     
+    }
+
+    nav ul li {
+        text-align: center; 
+        width: 100%;        
+    }
+
+    nav ul a {
+        padding: 15px; 
+        font-size: 1.2rem; 
+    }
+
+    nav ul a:hover {
+        background-color: #666; 
+        border-radius: 30px;
+    }
+
+    nav ul a:active {
+        background-color: #555; 
+    }
+
+    .offer {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .offer-details {
+        display: flex;
+        flex-direction: column;  
+        align-items: center; 
+        text-align: center; 
+    }
+
+    .offer-details img {
+        width: 90%; 
+        max-width: 500px; 
+        margin-bottom: 20px;
+    }
+
+    .des {
+        text-align: center;
+        font-size: 1rem; 
+        max-width: 100%;
+    }
 }
