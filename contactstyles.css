@@ -193,13 +193,6 @@ footer {
     width: 100%;
 }
 
-hr {
-    border: 0;
-    height: 1px;
-    background-color: #ddd;
-    margin: 40px 0;
-}
-
 /* Media Query for small screens (mobile) */
 @media screen and (max-width: 768px) {
 
