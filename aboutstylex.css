@@ -54,86 +54,101 @@ nav ul a:hover {
 nav ul a:active {
     background-color: #555; 
 }
-/*sec*/
-div {
-    padding: 20px;
+/* Section for the Story */
+section {
+    padding: 2rem;
     text-align: center;
-}
-
-h2,
-h3 {
-    color: #333;
-
 }
 
 h2 {
     font-style: italic;
-    font-size: 35px;
+    font-size: 2em;
     background-color: #333;
     color: #fff;
-    border-radius: 100px;
-    text-align: center;
+    border-radius: 50px;
 }
 
-p {
-    font-weight: bold;
-}
-
-/* Flexbox Layout for About Page */
-.about {
+.story {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 2rem;
     max-width: 1200px;
-    margin: auto;
-    padding: auto;
+    margin: 2rem auto;
+    padding: 1rem;
     flex-wrap: wrap;
 }
 
-.aboutimage {
-    flex: 1 1 40%;
-    max-width: 80%;
+.text {
+    flex: 1;
+    padding: 20px;
+    text-align: left;
+    font-size: 1.1em;
+}
+
+.image {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+.image img {
+    width: 100%;
+    max-width: 600px;
     height: auto;
     border-radius: 10px;
-    box-shadow: 0 0 24px 0 #444444ae;
-    width: 80%;
-}
-
-.abouttext {
-    flex: 1 1 50%;
-    max-width: 600px;
-    font-size: 1.25rem;
-    text-align: center;
-    margin: auto;
-}
-
-h3 strong {
-    color: #000;
-}
-
-.about img {
-    max-width: 80%;
-    height: auto;
-
-    border-radius: 50px;
-    margin: auto;
 }
 
 /* Footer */
 footer {
-    text-align: center;
-    padding: 10px;
     background-color: #444;
     color: #fff;
+    text-align: center;
+    padding: 20px;
     position: relative;
     bottom: 0;
     width: 100%;
 }
 
-hr {
-    border: 0;
-    height: 1px;
-    background-color: #ddd;
-    margin: 40px 0;
+/* For mobile screens */
+@media screen and (max-width: 480px) {
+    header {
+        padding: 30px 10px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    section h2 {
+        font-size: 1.4em;
+        padding: 8px;
+    }
+
+    .story {
+        flex-direction: column;
+    }
+
+    .text {
+        font-size: 1em;
+        padding: 10px;
+    }
+
+    .image img {
+        max-width: 100%;
+    }
+
+    footer {
+        font-size: 0.875rem;
+    }
 }
