@@ -54,49 +54,67 @@ nav ul a:hover {
 nav ul a:active {
     background-color: #555; 
 }
-/* Section for the Story */
+
+/* Section */
 section {
-    padding: 2rem;
+    padding: 20px;
     text-align: center;
 }
 
 h2 {
-    font-style: italic;
-    font-size: 2em;
-    background-color: #333;
+    font-size: 2.5rem;
     color: #fff;
-    border-radius: 50px;
+    background-color: #333;
+    border-radius: 20px;
+    padding: 15px;
+    margin-bottom: 70px;
 }
 
-.story {
+
+/* Story Container */
+.story-container {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 1rem;
-    flex-wrap: wrap;
+    margin-top: 20px;
+    gap: 20px;
+    min-height: calc(100vh - 140px); 
 }
 
 .text {
+    margin-left: 50px;
     flex: 1;
-    padding: 20px;
     text-align: left;
-    font-size: 1.1em;
+    font-size: 1.2em;
 }
 
 .image {
     flex: 1;
-    padding: 20px;
     text-align: center;
 }
 
 .image img {
-    width: 100%;
-    max-width: 600px;
+    max-width: 70%;
     height: auto;
     border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .story-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text, .image {
+        width: 100%;
+        padding: 0;
+    }
+
+    .image img {
+        width: 100%;
+        height: auto;
+    }
 }
 
 /* Footer */
@@ -108,47 +126,4 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
-}
-
-/* For mobile screens */
-@media screen and (max-width: 480px) {
-    header {
-        padding: 30px 10px;
-    }
-
-    h1 {
-        font-size: 1.8em;
-    }
-
-    nav ul {
-        flex-direction: column;
-        padding: 0;
-        margin: 0;
-    }
-
-    nav ul li {
-        margin: 5px 0;
-    }
-
-    section h2 {
-        font-size: 1.4em;
-        padding: 8px;
-    }
-
-    .story {
-        flex-direction: column;
-    }
-
-    .text {
-        font-size: 1em;
-        padding: 10px;
-    }
-
-    .image img {
-        max-width: 100%;
-    }
-
-    footer {
-        font-size: 0.875rem;
-    }
 }
