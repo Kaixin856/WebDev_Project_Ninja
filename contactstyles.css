@@ -42,20 +42,72 @@ nav ul a {
     padding: 10px 20px;
     color: #fff;
     text-decoration: none;
-    transition: background-color 0.3s ease; 
+    transition: background-color 0.3s ease;
     border-radius: 7px;
 }
 
 nav ul a:hover {
-    background-color: #666; 
+    background-color: #666;
     border-radius: 30px;
 }
 
 nav ul a:active {
-    background-color: #555; 
+    background-color: #555;
 }
 
+/* Contact Form Section */
+.contact-form-section {
+    max-width: 600px;
+    margin: 20px auto;
+    background: #ffffff7e;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
 
+.contact-form-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input, select, textarea, button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #444;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+}
+
+button:hover {
+    background-color: #666;
+}
+
+/* Error Messages */
+.error {
+    font-size: 0.875rem;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+/* Contact Details Section */
 .contact-section {
     display: flex;
     flex-wrap: wrap;
@@ -63,7 +115,7 @@ nav ul a:active {
     margin: 20px;
 }
 
-.contact-form, .contact-info {
+.contact-info {
     background: #ffffff7e;
     padding: 20px;
     margin: 10px;
@@ -72,39 +124,27 @@ nav ul a:active {
     width: 45%;
 }
 
-.contact-form h2, .contact-info h2 {
+.contact-info h2 {
     text-align: center;
     margin-bottom: 20px;
 }
 
-.contact-form label {
-    display: block;
-    margin-bottom: 8px;
-}
-
-.contact-form input, .contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-    max-width: 400px;
-
-}
-
-.contact-form input[type="submit"] {
-    background-color: #444;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-.contact-form input[type="submit"]:hover {
-    background-color: #666;
-}
-
 .contact-info p {
     margin: 10px 0;
+}
+
+/* Map Section */
+section h2 {
+    margin: 20px;
+    text-align: center;
+    background-color: #444;
+    color: #fff;
+    border-radius: 100px;
+    padding: 10px;
+}
+
+section div {
+    text-align: center;
 }
 
 /* Footer */
@@ -119,58 +159,33 @@ footer {
     margin-top: 15px;
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
-
     nav ul {
-        flex-direction: column;  
-        background-color: #333;  
-        border-radius: 50px;        
-        width: 100%;        
-        background-color: #302d2d;     
-    }
-
-    nav ul li {
-        text-align: center; 
-        width: 100%;        
-    }
-
-    nav ul a {
-        padding: 15px; 
-        font-size: 1.2rem; 
-    }
-
-    nav ul a:hover {
-        background-color: #666; 
-        border-radius: 30px;
-    }
-
-    nav ul a:active {
-        background-color: #555; 
-    }
-    
-    .contact-form, .contact-info {
+        flex-direction: column;
+        border-radius: 50px;
         width: 100%;
     }
 
-    .contact-form input, .contact-form textarea {
-    
-        max-width: 300px;
-        
+    nav ul li {
+        text-align: center;
+        width: 100%;
+    }
+
+    nav ul a {
+        padding: 15px;
+        font-size: 1.2rem;
+    }
+
+    .contact-info {
+        width: 100%;
+    }
+
+    .contact-form-section {
+        width: 90%;
+    }
+
+    input, select, textarea, button {
+        font-size: 1rem;
     }
 }
-
-section h2 {
-    margin: 20px;
-    text-align: center;
-    background-color: #444;
-    color: #fff;
-    border-radius: 100px;
-    padding: 10px;
-}
-
-section div {
-    text-align: center;
-}
-
-
-
